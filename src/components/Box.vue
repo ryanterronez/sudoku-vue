@@ -1,11 +1,11 @@
 <script setup>
 import { ref } from 'vue';
 
-const value = ref('')
+const props = defineProps(['boxValue'])
 </script>
 
 <template>
-  <button>{{ value }}</button>
+  <button>{{ boxValue }}</button>
 </template>
 
 <style scoped>

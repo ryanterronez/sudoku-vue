@@ -3,7 +3,7 @@ import Box from './components/Box.vue';
 </script>
 
 <template>
-  <Box />
+  <Box :boxValue="6" />
 </template>
 
 <style scoped>
