@@ -2,7 +2,7 @@
 import { ref } from "vue";
 import Box from "./Box.vue";
 
-const board = ref([]);
+const board = ref(new Array(9).fill(new Array(9).fill(0)));
 const solution = ref([]);
 
 async function getBoard() {
@@ -12,7 +12,6 @@ async function getBoard() {
     if (!response.ok) {
       throw new Error(`Response status: ${response.status}`);
     }
-
     const json = await response.json();
     board.value = json.newboard.grids[0].value;
     solution.value = json.newboard.grids[0].solution;
@@ -24,8 +23,9 @@ async function getBoard() {
 
 <template>
   <button @click="getBoard">Board</button>
-  <tr v-for="j in 9" :key="j">
-    <td v-for="i in 9" :key="i"><Box :boxValue="i" /></td>
+
+  <tr v-for="i in 9">
+    <td v-for="j in 9"><Box :boxValue="board[i - 1][j - 1]" /></td>
   </tr>
 </template>
 
