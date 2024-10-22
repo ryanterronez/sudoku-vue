@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import Box from "./Box.vue";
+import Square from "./Square.vue";
 
 const board = ref(new Array(9).fill(new Array(9).fill(0)));
 const solution = ref([]);
@@ -23,10 +23,13 @@ async function getBoard() {
 
 <template>
   <button @click="getBoard">Board</button>
-
-  <tr v-for="i in 9">
-    <td v-for="j in 9"><Box :boxValue="board[i - 1][j - 1]" /></td>
-  </tr>
+  <table>
+    <tr v-for="i in 3">
+      <td v-for="j in 3">
+        <Square />
+      </td>
+    </tr>
+  </table>
 </template>
 
 <style scoped>
