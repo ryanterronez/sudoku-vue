@@ -1,7 +1,5 @@
 <script setup>
-import { ref } from 'vue';
-
-const props = defineProps(['boxValue'])
+const props = defineProps(["boxValue"]);
 </script>
 
 <template>
@@ -12,8 +10,10 @@ const props = defineProps(['boxValue'])
 button {
   font: comic sans ms;
   font-size: 32px;
-  width: 80px; /* Adjust size as needed */
-  height: 80px; /* Adjust size as needed */
+  width: 80px;
+  /* Adjust size as needed */
+  height: 80px;
+  /* Adjust size as needed */
   border-radius: 0;
   display: flex;
   justify-content: center;

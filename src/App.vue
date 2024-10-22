@@ -1,10 +1,10 @@
 <script setup>
-import Box from './components/Box.vue';
+import Box from "./components/Box.vue";
+import Board from "./components/Board.vue";
 </script>
 
 <template>
-  <Box :boxValue="6" />
+  <Board />
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
