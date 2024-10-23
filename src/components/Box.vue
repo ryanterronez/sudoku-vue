@@ -15,6 +15,7 @@ button {
   height: 80px;
   /* Adjust size as needed */
   border-radius: 0;
+  border: none;
   display: flex;
   justify-content: center;
   align-items: center;
